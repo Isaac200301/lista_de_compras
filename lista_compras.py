@@ -1,13 +1,17 @@
 lista_compras = []
 
 def agregar_articulo():
-    agg_art = input("Nombre del articulo: ")
-    lista_compras.append(agg_art)
+    while True:
+        agg_art = input("Nombre del articulo: ")
+        lista_compras.append(agg_art)
+        decision = input("¿Quiere seguir agregando? y/n: ")
+        if decision == "n":
+            break
 
 def eliminar_articulo():
     print(lista_compras)
-    indice = input(int("Seleccione el indice del articulo que desea eliminar: "))
-    del lista_compras[indice]
+    indice = int(input("Seleccione el indice del articulo que desea eliminar: "))
+    del lista_compras[indice + 1] #indice mas uno para que no exista la posicion cero
 
 def mostrar_lista():
     print(lista_compras)
@@ -20,15 +24,15 @@ while True:
     print("3. Mostrar lista")
     print("4. Salir")
 
-    opción = input("Seleccione una opción (solo numero): ")
+    opción = int(input("Seleccione una opción (solo numero): "))
 
-    if opción == "1":
+    if opción == 1:
         agregar_articulo()
-    elif opción == "2":
+    elif opción == 2:
         eliminar_articulo()
-    elif opción == "3":
+    elif opción == 3:
         mostrar_lista()
-    elif opción == "4":
+    elif opción == 4:
         print("Saliendo del programa...")
         break
     else:
