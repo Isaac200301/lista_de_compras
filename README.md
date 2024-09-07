@@ -28,7 +28,7 @@ El usuario puede seguir agregando artículos hasta que indique que no quiere con
 
 Muestra los artículos de la lista junto con su índice.
 Solicita al usuario que seleccione el índice del artículo a eliminar.
-**Nota:** El índice tiene un error en la línea del lista_compras[indice + 1]. Debe corregirse a del lista_compras[indice] para evitar errores de rango fuera de índice.
+**Nota:** Al numero del usuario se le resta uno para que no exista la posicion cero.
 
 **mostrar_lista():**
 

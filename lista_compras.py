@@ -10,8 +10,8 @@ def agregar_articulo():
 
 def eliminar_articulo():
     print(lista_compras)
-    indice = int(input("Seleccione el indice del articulo que desea eliminar: "))
-    del lista_compras[indice + 1] #indice mas uno para que no exista la posicion cero
+    indice = int(input("Seleccione el indice del articulo que desea eliminar: "))-1 #menos uno para que no exista la posicion cero 
+    del lista_compras[indice] 
 
 def mostrar_lista():
     print(lista_compras)
