@@ -1,5 +1,18 @@
 lista_compras = []
 
+def agregar_articulo():
+    agg_art = input("Nombre del articulo: ")
+    lista_compras.append(agg_art)
+
+def eliminar_articulo():
+    print(lista_compras)
+    indice = input(int("Seleccione el indice del articulo que desea eliminar: "))
+    del lista_compras[indice]
+
+def mostrar_lista():
+    print(lista_compras)
+
+
 while True:
     print("\nMenú")
     print("1. Agregar articulo")
